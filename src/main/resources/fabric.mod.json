@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "timingghost",
+  "version": "${version}",
+  "name": "TimingGhost",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/timingghost/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.tekad.timingghost.client.TimingghostDataGenerator"
+    ],
+    "client": [
+      "com.tekad.timingghost.client.TimingghostClient"
+    ],
+    "main": [
+      "com.tekad.timingghost.Timingghost"
+    ]
+  },
+  "mixins": [
+    "timingghost.mixins.json",
+    {
+      "config": "timingghost.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
